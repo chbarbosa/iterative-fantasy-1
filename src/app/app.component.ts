@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'iterative-fantasy-1';
+  enteringCastle: boolean = false;
+
+  goCastle() {
+    this.enteringCastle = true;
+  }
+
+  noGoCastle() {
+    this.enteringCastle = false;
+  }
 }
