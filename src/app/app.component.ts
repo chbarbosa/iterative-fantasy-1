@@ -10,11 +10,24 @@ export class AppComponent {
   enteringCastle: boolean = false;
   night: boolean = localStorage.getItem("night") === "true";
 
+  constructor() {
+    if (this.night) {      
+      this.setDark();
+    }
+  }
+
   goTonight() {
     alert("ir à noite!");
     this.night = true;
     localStorage.setItem("night", "true");
+    this.setDark();
   }
+
+  private setDark() {
+    document.body.style.backgroundColor = "#343a40";
+    document.body.style.color = "LightGoldenRodYellow";
+  }
+
   goNow() {    
     if(confirm("Confirma?")) {
       alert("ir imediatamente!");
