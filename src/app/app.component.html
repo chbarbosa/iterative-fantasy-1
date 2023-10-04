@@ -5,12 +5,13 @@
     Um “investigador” chamado Alejandro soube das histórias sobre o local e da preocupação do prefeito com a situação. Notando que as pessoas ali também estavam preocupadas, decidiu oferecer seus “serviços” ao prefeito.
     A negociação foi rápida, ele escutou lamentos por quase 30 minutos sobre a situação da cidade que ficou largada com a mudança do duque para um novo castelo mais próximo da costa. O prefeito ainda acrescentou que a viúva Matilde tinha desaparecido há uma semana, os guardas tinham encontrado sua cesta e outros pertences próximo ao bosque da macieiras que não fica distante do castelo. O prefeito ofereceu 10 moedas de ouro, hospedagem e alimentação pagas pela cidade, caso Alejandro descobrisse o que estava acontecendo.
   </P>
-  <div *ngIf="!night">
+  <div *ngIf="hasNoDecision(); else elseBlock">
     <hr>
     <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goNow()" role="button">Ir imediatamente!</a>
     <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goTonight()" role="button">Esperar para ir a noite</a>
   </div>
-  <div *ngIf="night">
+  <ng-template #elseBlock>
+  <div *ngIf="getNight()">
   <P>
     Na noite seguinte, foi investigar o local levando uma bolsa com alguns itens interessantes, uma pequena besta e uma espada ense com lâmina amarelada. Usando uma proteção de couro grosso de cor chumbo para ajudar na tarefa furtiva e resistir ao frio que fazia naquela época.
     Quando chegou perto da entrada, escutava um barulho estranho que vinha de uma abertura escura à direita da entrada. Ele também tinha notado que algumas tochas dentro do castelo tinham sido acesas.
@@ -20,5 +21,11 @@
     <app-entering-castle *ngIf="enteringCastle"></app-entering-castle>
     <app-strange-opening *ngIf="!enteringCastle"></app-strange-opening>
   </div>
+  <div *ngIf="!getNight()">
+  <P>
+    de dia.
+  </P>
+  </div>
+</ng-template>
 </div>
   

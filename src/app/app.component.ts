@@ -8,17 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'iterative-fantasy-1';
   enteringCastle: boolean = false;
-  night: boolean = localStorage.getItem("night") === "true";
 
   constructor() {
-    if (this.night) {      
+    if (this.getNight()) {      
       this.setDark();
     }
+    console.log("ops :" + this.hasNoDecision());
+    console.log("night" + this.getNight())
   }
 
   goTonight() {
-    alert("ir à noite!");
-    this.night = true;
     localStorage.setItem("night", "true");
     this.setDark();
   }
@@ -30,8 +29,6 @@ export class AppComponent {
 
   goNow() {    
     if(confirm("Confirma?")) {
-      alert("ir imediatamente!");
-      this.night = false;
       localStorage.setItem("night", "false");
     } 
   }
@@ -42,5 +39,13 @@ export class AppComponent {
 
   noGoCastle() {
     this.enteringCastle = false;
+  }
+
+  hasNoDecision() {
+    return localStorage.getItem("night") == undefined;
+  }
+
+  getNight() {
+    return  localStorage.getItem("night") === "true";
   }
 }
