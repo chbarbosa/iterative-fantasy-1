@@ -1,32 +1,39 @@
 <div class="container">
   <h1 class="my-5">Castelo abandonado</h1>
-  <p>teste mudança versão 4</p>
   <P>
-    Há quase quatro meses, luzes estranhas foram vistas no antigo castelo do ducado das terras noroeste. Algumas noites eram verdes, outras azuis. E eram laranjas nas noites de lua cheia.
-    Um “investigador” chamado Alejandro soube das histórias sobre o local e da preocupação do prefeito com a situação. Notando que as pessoas ali também estavam preocupadas, decidiu oferecer seus “serviços” ao prefeito.
-    A negociação foi rápida, ele escutou lamentos por quase trinta minutos sobre a situação da cidade que ficou largada com a mudança do duque para um novo castelo mais próximo da costa. O prefeito ainda acrescentou que a viúva Matilde tinha desaparecido há uma semana, os guardas tinham encontrado sua cesta e outros pertences próximo ao bosque da macieiras que não fica distante do castelo. O prefeito ofereceu 10 moedas de ouro, hospedagem e alimentação pagas pela cidade, caso Alejandro descobrisse o que estava acontecendo.
+    Há quase quatro meses, luzes estranhas foram vistas no antigo castelo do ducado das terras noroeste. Algumas noites
+    eram verdes, outras azuis. E eram laranjas nas noites de lua cheia.
+    Um “investigador” chamado Alejandro soube das histórias sobre o local e da preocupação do prefeito com a situação.
+    Notando que as pessoas ali também estavam preocupadas, decidiu oferecer seus “serviços” ao prefeito.
+    A negociação foi rápida, ele escutou lamentos por quase trinta minutos sobre a situação da cidade que ficou largada
+    com a mudança do duque para um novo castelo mais próximo da costa. O prefeito ainda acrescentou que a viúva Matilde
+    tinha desaparecido há uma semana, os guardas tinham encontrado sua cesta e outros pertences próximo ao bosque da
+    macieiras que não fica distante do castelo. O prefeito ofereceu 10 moedas de ouro, hospedagem e alimentação pagas
+    pela cidade, caso Alejandro descobrisse o que estava acontecendo.
   </P>
   <div *ngIf="hasNoDecision(); else elseBlock">
     <hr>
     <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goNow()" role="button">Ir imediatamente!</a>
-    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goTonight()" role="button">Esperar para ir a noite</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goTonight()" role="button">Esperar para ir a
+      noite</a>
   </div>
   <ng-template #elseBlock>
-  <div *ngIf="getNight()">
-  <P>
-    Na noite seguinte, foi investigar o local levando uma bolsa com alguns itens interessantes, uma pequena besta e uma espada ense com lâmina amarelada. Usando uma proteção de couro grosso de cor chumbo para ajudar na tarefa furtiva e resistir ao frio que fazia naquela época.
-    Quando chegou perto da entrada, escutava um barulho estranho que vinha de uma abertura escura à direita da entrada. Ele também tinha notado que algumas tochas dentro do castelo tinham sido acesas.
-  </P>
-    <hr>
-    Descer? Ou entrar?
-    <app-entering-castle *ngIf="enteringCastle"></app-entering-castle>
-    <app-strange-opening *ngIf="!enteringCastle"></app-strange-opening>
-  </div>
-  <div *ngIf="!getNight()">
-  <P>
-    de dia.
-  </P>
-  </div>
-</ng-template>
+    <P>
+      Na noite seguinte, foi investigar o local levando uma bolsa com alguns itens interessantes, uma pequena besta e
+      uma espada ense com lâmina amarelada. Usando uma proteção de couro grosso de cor chumbo para ajudar na tarefa
+      furtiva e resistir ao frio que fazia naquela época.
+      Quando chegou perto da entrada, escutava um barulho estranho que vinha de uma abertura escura à direita da
+      entrada. Ele também tinha notado que algumas tochas dentro do castelo tinham sido acesas.
+    </P>
+    <div *ngIf="hasNoWayDecision(); else elseBlockForWay">
+      <hr>
+      <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="enterCastle()" role="button">Entrar no castelo</a>
+      <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goStrangeOpening()" role="button">Descer pela
+        abertura</a>
+    </div>
+    <ng-template #elseBlockForWay>
+      <app-entering-castle *ngIf="hasEnteredCastle()"></app-entering-castle>
+      <app-strange-opening *ngIf="!hasEnteredCastle()"></app-strange-opening>
+    </ng-template>
+  </ng-template>
 </div>
-  

@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'iterative-fantasy-1';
-  enteringCastle: boolean = false;
 
   constructor() {
-    if (this.getNight()) {      
+    if (this.getNight()) {
       this.setDark();
     }
     console.log("ops :" + this.hasNoDecision());
@@ -27,18 +26,10 @@ export class AppComponent {
     document.body.style.color = "LightGoldenRodYellow";
   }
 
-  goNow() {    
-    if(confirm("Confirma?")) {
+  goNow() {
+    if (confirm("Confirma?")) {
       localStorage.setItem("night", "false");
-    } 
-  }
-
-  goCastle() {
-    this.enteringCastle = true;
-  }
-
-  noGoCastle() {
-    this.enteringCastle = false;
+    }
   }
 
   hasNoDecision() {
@@ -46,6 +37,22 @@ export class AppComponent {
   }
 
   getNight() {
-    return  localStorage.getItem("night") === "true";
+    return localStorage.getItem("night") === "true";
+  }
+  hasNoWayDecision() {
+    return localStorage.getItem("castle") == undefined;
+  }
+  enterCastle() {
+    if (confirm("Confirma?")) {
+      localStorage.setItem("castle", "true");
+    }
+  }
+  goStrangeOpening() {
+    if (confirm("Confirma?")) {
+      localStorage.setItem("castle", "false");
+    }
+  }
+  hasEnteredCastle() {
+    return  localStorage.getItem("castle") === "true";
   }
 }

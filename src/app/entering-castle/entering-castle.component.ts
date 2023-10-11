@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./entering-castle.component.css']
 })
 export class EnteringCastleComponent {
+  climbStairs() {
+    localStorage.setItem("nextRoom", "false");
+  }
+  hasGoneNextRoom() {
+    return  localStorage.getItem("nextRoom") === "true";
+  }
+  goNextRoom() {
+    localStorage.setItem("nextRoom", "true");
+  }
+  hasNoDecision() {
+    return localStorage.getItem("nextRoom") == undefined;
+  }
 
 }

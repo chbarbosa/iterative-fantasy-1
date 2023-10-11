@@ -1,1 +1,28 @@
-<p>entering-castle works!</p>
+<h2 class="my-5">Entrando no castelo</h2>
+<p>Ele entrou pela grande porta de madeira velha acessando um grande salão, onde uma pequena tocha indicava um possível
+    caminho subindo, o local estava mal iluminado e fedia bastante, além de estar totalmente tomado por poeira nos
+    poucos móveis que restavam, algumas teias de aranhas mostravam que eram as verdadeiras moradoras dali. Depois notou
+    que havia outro local, uma tocha falhava, mas teimosamente indicava uma sala mais a direita, ele pensou um pouco e …
+</p>
+<div *ngIf="hasNoDecision(); else elseBlock">
+  <hr>
+  <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goNextRoom()" role="button">Ir para a sala</a>
+  <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="climbStairs()" role="button">Subir escada</a>
+</div>
+<ng-template #elseBlock>
+<div *ngIf="hasGoneNextRoom()">
+<P>
+    Entrando no local mal iluminado, Alejandro descobriu a sala de jantar, era bem grande e o desgaste das cadeiras e da mesa mostrava que o local estava abandonado, porém em cima da mesa, uma jovem senhora estava amordaçada e desacordada. Ele tentou acordá-la, mas não teve sucesso, notou que a mulher estava um pouco pálida e visivelmente abatida. 
+    Ele sentiu um cheiro estranho vindo de um local que parecia uma grande despensa, então armou sua besta e entrou lá.
+    O local estava abandonado também, tudo cheio de poeira e teias de aranha. Haviam dois sacos estranhos que derramaram um líquido verde escuro, dali vinha esse  cheiro, mas Alejandro escutou um barulho baixo vindo da outra sala e voltou rapidamente para lá.
+    Saudações intruso, talvez agressor pelas armas que carrega e pela proteção que usa - disse um homem de barba rala de pele pálida com os braços abertos.
+    Deixa eu adivinhar, sanguessuga? - indagou Alejandro.
+    Isso, eu me chamo Anton, sou um vampiro, um filho da noite. Acho que vou arrancar sua língua por essa ofensa - disse o homem claramente irritado.
+    Vai ter que me pegar primeiro, covarde! - gritou Alejandro.    
+</P>
+  <hr>
+  Descer? Ou entrar?
+  <app-entering-next-room *ngIf="hasGoneNextRoom()"></app-entering-next-room>
+  <app-climbing-stairs *ngIf="!hasGoneNextRoom()"></app-climbing-stairs>
+</div>
+</ng-template>
