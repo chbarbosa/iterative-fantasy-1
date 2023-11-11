@@ -1,1 +1,90 @@
-<p>entering-next-room works!</p>
+<h3 class="my-5">Próxima sala</h3>
+<p>
+    Entrando no local mal iluminado, Alejandro descobriu a sala de jantar, era bem grande e o desgaste das cadeiras e da
+    mesa mostrava que o local estava abandonado, porém em cima da mesa, uma jovem senhora estava amordaçada e
+    desacordada. Ele tentou acordá-la, mas não teve sucesso, notou que a mulher estava um pouco pálida e visivelmente
+    abatida.
+    Ele sentiu um cheiro estranho vindo de um local que parecia uma grande despensa, então armou sua besta e entrou lá.
+    O local estava abandonado também, tudo cheio de poeira e teias de aranha. Haviam dois sacos estranhos que derramaram
+    um líquido verde escuro, dali vinha esse cheiro, mas Alejandro escutou um barulho baixo vindo da outra sala e voltou
+    rapidamente para lá.</p>
+<p>
+    - Saudações intruso, talvez agressor pelas armas que carrega e pela proteção que usa - disse um homem de barba rala
+    de
+    pele pálida com os braços abertos.<br>
+    - Deixa eu adivinhar, sanguessuga? - indagou Alejandro.<br>
+    - Isso, eu me chamo Anton, sou um vampiro, um filho da noite. Acho que vou arrancar sua língua por essa ofensa -
+    disse
+    o homem claramente irritado.<br>
+    - Vai ter que me pegar primeiro, covarde! - gritou Alejandro.
+</p>
+<div *ngIf="hasNoDecision(); else elseBlock">
+    <hr>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useBesta()" role="button">Usar a besta</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword()" role="button">Usar a espada</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run()" role="button">Fugir!</a>
+</div>
+<ng-template #elseBlock>
+    <div *ngIf="hasUsedBesta()">
+        <p>
+            Alejandro disparou duas vezes em direção a Anton que desviou com alguma facilidade.<br>
+            Só isso, rapaz? Pensei que seria um verdadeiro desafio - disse o vampiro zombando.<br>
+            Quando Anton estava bem próximo para abocanhar o pescoço de seu alvo, Alejandro mostrou sua espada que
+            segurava com a mão direita. Enquanto o vampiro cravava suas presas no braço esquerdo protegido por couro
+            grosso, uma espada ense perfurava seu ventre causando uma dor inimaginável com um golpe relâmpago de
+            Alejandro. O vampiro deu dois passos para trás a fim de evitar a lâmina para apenas ser decapitado por
+            Alejandro.
+
+        </p>
+    </div>
+    <div *ngIf="hasUsedSword()">
+        <p>
+            Anton avançava sem medo esperando um momento para dar um bote, enquanto que Alejandro segurava sua espada de
+            forma ameaçadora esperando o ataque do vampiro. Quando Anton passou pelo corpo da mulher que voltava a
+            mexer-se, ela tentou agarrá-lo de uma forma desajeitada, acabando caindo da mesa aos pés de Anton. Ele riu
+            daquilo, mas quando percebeu era tarde demais. Alejandro avançou silenciosamente e cravou de baixo para cima
+            sua espada no coração do vampiro. Anton arregalou os olhos, já não tinha mais controle, ele apenas olhava
+            nos olhos de Alejandro que girou e retirou sua espada deixando o corpo do inimigo cair para frente sem vida.
+            Era o fim de um vampiro quase secular.
+        </p>
+    </div>
+    <div *ngIf="hasRun()">
+        <p>
+            Alejandro correu para a esquerda usando duas velhas cadeiras de jantar para distrair Anton, o vampiro apenas
+            riu da tentativa infantil do intruso. Com uma força sobre humana, ele fechou o caminho com uma mesa, saltou
+            sobre Alejandro e só parou quando sua sede foi saciada.
+        </p>
+    </div>
+    <div *ngIf="hasUsedBesta() || hasUsedSword()">
+        <p>
+            Ele verificou a mulher que ainda tinha vida, mas estava fraca e pálida. O vampiro tinha acabado com ela,
+            deixando-a quase sem forças. Assim pegou de dentro de sua bolsa um pequeno embrulho que tinha algumas ervas
+            secas em pó, um preparo que ele aprendeu há muito tempo atrás na juventude. ele esmagou aquilo na frente do
+            rosto dela fazendo uma pequena fumaça verde sair para que a moça pudesse lhe aspirar.</p>
+        <p>
+            - Espero que seja o suficiente até chegarmos a um curandeiro - disse a moça que ainda estava sem reação.<br>
+            - Não acho que os dois sairão aqui, então não se preocupe - alguém falou do grande salão lado.<br>
+            Alejandro rapidamente pegou sua espada e preparou sua besta. E foi em direção ao grande salão de entrada,
+            onde mais uma figura sinistra estava descendo e encontrava-se no meio da grande escada, esse parou para
+            encarar o ladino que acabara de voltar da sala de jantar.<br>
+            - Você conseguiu matar meu primo. Não vai sair daqui com vida, nem terá uma morte rápida - falou o vampiro
+            se
+            preparando para um ataque frontal.<br>
+            Irritado, o vampiro atacou ferozmente contra Alejandro que utilizou praticamente a mesma tática ensinada por
+            seu tio Oswaldo, ele distraiu o vampiro com um disparo de sua besta. A criatura avançou para uma abocanhada
+            mortal, mas encontrou a lâmina fria de aço que atravessou o coração dela.<br>
+            - Nunca… mais você terá… paz. Será caçado por nós… até… - então a “vida” deixou aquele corpo, a essência de
+            outro vampiro secular retornava para as trevas.<br>
+        </p>
+        <p>
+            Alejandro ainda vasculhou o castelo por quase uma hora tremendo encontrar outro ser da noite, apenas
+            encontrou os pertences dos vampiros. Um anel estranho que supôs ser mágico, precisaria levar para um
+            especialista, algumas poucas peças de ouro, então saiu de lá com Matilde. Na saída, notou que o barulho
+            tinha acabado junto com o calafrio que sentia. Na cidade, relatou tudo o que descobriu ao prefeito e ao
+            capitão da guarda. Assim, um mensageiro foi enviado
+            à capital para relatar a presença de vampiros ali. Matilda mesmo sendo tratada por um curandeiro experiente
+            não resistiu e morreu depois de dois dias, Alejandro nunca mais voltou àquela cidade, ele sempre lembrou das
+            palavras do vampiro.
+        </p>
+    </div>
+</ng-template>
