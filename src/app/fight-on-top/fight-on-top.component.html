@@ -1,0 +1,68 @@
+<div *ngIf="hasNoDecision(); else elseBlock">
+    <hr>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useBesta()" role="button">Usar a besta?</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword()" role="button">Usar a espada?</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run()" role="button">Fugir!!</a>
+</div>
+<ng-template #elseBlock>
+    <div *ngIf="hasUsedBesta()">
+        <p>
+            Alejandro disparou duas vezes, Alexis desviou com alguma facilidade.<br>
+            - Ha! Pensei que seria um verdadeiro desafio - disse o vampiro zombando.<br>
+            Quando o inimigo estava bem próximo para abocanhar o pescoço de Alejandro, ele mostrou sua espada que
+            segurava com a mão direita. Enquanto o vampiro cravava suas presas no braço esquerdo protegido por couro
+            grosso, uma espada ense perfurava seu ventre causando uma dor inimaginável com um golpe relâmpago de
+            Alejandro.
+            O vampiro deu dois passos para trás a fim de evitar a lâmina para apenas ser decapitado em seguida.
+
+        </p>
+        <p>
+            Alejandro ainda procurou por alguns minutos naquele lugar, mas não teve muito tempo, pois escutou um chamado
+            do salão onde passou.<br>
+            - Então! Estou esperando aqui embaixo! Você desce? Ou eu irei até você! Parece que sou o novo senhor do
+            castelo agora - disse com uma voz bem sinistra.<br>
+            Ele preparou sua besta e foi na direção com bastante cuidado, pois tinha certeza que outro vampiro o
+            aguardava em um local bem escuro.
+            Quando chegou lá, encontrou um outro vampiro bem no meio do salão, sua roupa era diferente, mas carregava um
+            símbolo quase igual na altura do ombro, e fisicamente eram parecidos também.<br>
+            - Pelo jeito você matou meu primo, não foi? Seu maldito! Eu vou acabar com você! Eu, Anton, um filho da
+            noite! - o vampiro mal terminou de falar e fez um salto incrível na direção de Anton.<br>
+            O ataque foi impressionante e um erro, pois os disparos de Alejandro acertaram em cheio fazendo a criatura
+            tombar quase na metade do caminho. O ladino não perdeu tempo e matou a criatura com um golpe fatal no
+            coração.<br>
+            - Meu… minha família… vai caçar você… mal… - e essa foram as últimas palavras de um vampiro quase secular.
+        </p>
+        <p>
+            Alejandro vasculhou o castelo por quase uma hora temendo encontrar outro ser da noite, apenas achou alguns
+            pertences dos vampiros. Um anel estranho que supôs ser mágico, precisaria levar para um especialista,
+            algumas poucas peças de ouro. Na sala ao lado do grande salão, encontrou o corpo de Matilde, parece que o
+            segundo vampiro tirou sua vida, enquanto ele lutava com seu primo na biblioteca. Na saída, notou que o
+            barulho tinha acabado junto com o calafrio que sentia.
+            Na cidade, relatou tudo o que descobriu ao prefeito e ao capitão da guarda. Assim, um mensageiro foi enviado
+            à capital para relatar a presença de vampiros ali. Alejandro nunca mais voltou àquela cidade, sempre lembrou
+            das palavras do vampiro. Ele precisava se preparar para enfrentar vampiros pelo resto de sua vida.
+
+        </p>
+    </div>
+    <div *ngIf="hasUsedSword()">
+        <p>
+            - Sim! Minha espada quer saber como você se sente morrendo!? - gritou Alejandro avançado de forma muito
+            agressiva e despreparada.<br>
+            Alexis avançava sem medo esperando um momento para dar um bote, enquanto que Alejandro segurava sua espada
+            de forma ameaçadora esperando o ataque do vampiro. Quando Alexis chegou na distância desejada, saltou como
+            um pantera contra Alejandro que fez um golpe perfurante poderosíssimo que atravessou o coração!ao do
+            vampiro, mas o salto de Alexis foi tão poderoso que ele foi capaz de acertar fatalmente o pescoço do
+            ladino.<br>
+            Parece que ambos podemos responder à sua espada… - disse Alexis ao cadáver de Alejandro enquanto caía sobre
+            ele.<br>
+
+        </p>
+    </div>
+    <div *ngIf="hasRun()">
+        <p>
+            Alejandro correu para a esquerda usando duas velhas cadeiras para distrair o vampiro que apenas riu da
+            tentativa infantil do intruso. Com uma força sobre humana, fechou o caminho, saltou sobre Alejandro e só
+            parou quando sua sede foi saciada.
+        </p>
+    </div>
+</ng-template>

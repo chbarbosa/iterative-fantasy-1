@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { EnteringCastleComponent } from './entering-castle/entering-castle.component';
 import { StrangeOpeningComponent } from './strange-opening/strange-opening.component';
 import { EnteringNextRoomComponent } from './entering-next-room/entering-next-room.component';
-import { ClimbingStairsComponent } from './climbing-stairs/climbing-stairs.component';
+import { GoingUpComponent } from './going-up/going-up.component';
+import { FightOnTopComponent } from './fight-on-top/fight-on-top.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ClimbingStairsComponent } from './climbing-stairs/climbing-stairs.compo
     EnteringCastleComponent,
     StrangeOpeningComponent,
     EnteringNextRoomComponent,
-    ClimbingStairsComponent
+    GoingUpComponent,
+    FightOnTopComponent
   ],
   imports: [
     BrowserModule

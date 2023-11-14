@@ -1,0 +1,37 @@
+<h3 class="my-5">Subindo</h3>
+<p>
+    Ele subiu com muito cuidado tentando fazer pouco barulho enquanto escutava um som estranho, ele tinha duas opções,
+    ir para um corredor à direita onde uma sala que emitia uma luz roxa, ou ir para o outro corredor na direção oposta
+    com várias portas de supostos quarto ainda havendo uma grande porta do lado esquerdo deste corredor.</p>
+
+<div *ngIf="hasNoDecision(); else elseBlock">
+    <hr>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goLeft()" role="button">Ir para esquerda</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goRight()" role="button">Ir para direita</a>
+</div>
+<ng-template #elseBlock>
+    <div *ngIf="hasGoneLeft()">
+        <p>
+            Ele caminhou com cuidado enquanto verificava cada quarto vazio tomado por muita poeira e teias de
+            aranhas.<br>
+            Quando tentou ignorar a grande sala à esquerda para verificar os outros quartos, ele escutou…<br>
+            - Entre, não seja tolo, estou ansioso para conhecer você - disse alguém com uma voz jocosa.<br>
+            Alejandro atendeu o desafio com sua besta preparada e sua espada em punho.<br>
+            - Olá, intrometido! Eu me chamo Alexis, um filho da noite. Quer fazer uma ou duas perguntas antes de morrer
+            saciando minha fome? - desafio o vampiro se levantando.<br>
+        </p>
+        <app-fight-on-top></app-fight-on-top>
+    </div>
+    <div *ngIf="hasGoneRight()">
+        <p>
+            Abrindo a porta, Alejandro é completamente envolvido por uma luz roxa ofuscante, seu corpo é completamente
+            sugado para dentro daquele lugar. Ele tem uma sensação estranha, seu estômago se contorce, ele se sente leve
+            e perde a sensação de tocar o chão.
+            Quando voltou a si, ele estava de olhos fechados, tinha feito isso por instinto, já não sentia mais o ar
+            empoeirado do velho castelo, então abriu os olhos, e pouco via ali. Haviam duas tochas iluminando a frente,
+            não entendia onde estava, tateou o chão e a parede atrás, estavam frios, havia muita umidade no local, era
+            um chão bem arenoso e paredes de pedras. Então uma luz alaranjada iluminou revelando temporariamente um
+            corredor natural de uma caverna.
+        </p>
+    </div>
+</ng-template>

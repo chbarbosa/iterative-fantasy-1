@@ -10,8 +10,6 @@
   <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="climbStairs()" role="button">Subir escada</a>
 </div>
 <ng-template #elseBlock>
-<div *ngIf="hasGoneNextRoom()">
   <app-entering-next-room *ngIf="hasGoneNextRoom()"></app-entering-next-room>
-  <app-climbing-stairs *ngIf="!hasGoneNextRoom()"></app-climbing-stairs>
-</div>
+  <app-going-up *ngIf="hasClimbed()"></app-going-up>
 </ng-template>
