@@ -7,6 +7,7 @@ import { StrangeOpeningComponent } from './strange-opening/strange-opening.compo
 import { EnteringNextRoomComponent } from './entering-next-room/entering-next-room.component';
 import { GoingUpComponent } from './going-up/going-up.component';
 import { FightOnTopComponent } from './fight-on-top/fight-on-top.component';
+import { RunFromComponent } from './run-from/run-from.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FightOnTopComponent } from './fight-on-top/fight-on-top.component';
     StrangeOpeningComponent,
     EnteringNextRoomComponent,
     GoingUpComponent,
-    FightOnTopComponent
+    FightOnTopComponent,
+    RunFromComponent
   ],
   imports: [
     BrowserModule

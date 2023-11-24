@@ -1,0 +1,39 @@
+<h3 class="my-5">Descendo</h3>
+<p>
+    Como uma verdadeira cobra, ele saiu do local com toda cautela tremendo por sua vida, seus instintos alertavam que
+    aquele alquimista parecia ser muito perigoso e não arriscou sua sorte.
+    Ele andou por mais alguns metros até notar que o local começava a ficar iluminado a frente uma saída parecia estar,
+    porém percebeu que dois orcs guardavam o local, pareciam ser orcs, eram estranhos, tinham a estatura de humanos
+    baixos. Ele pensou:
+</p>
+
+<div *ngIf="hasNoDecision(); else elseBlock">
+    <hr>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword()" role="button">Atacar com
+        espada</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="distract()" role="button">Distrair</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run()" role="button">Fugir</a>
+</div>
+<ng-template #elseBlock>
+    <div *ngIf="hasUsedSword()">
+        <p>
+            Em um movimento perfeito de ataque, Alejandro derrubou os dois adversários, disparou mortalmente contra o
+            primeiro deixando o segundo surpreso e aterrorizado, isso deu tempo para um ataque com a espada matando o
+            outro guarda.
+            Alejandro sumiu dali o mais rápido possível e nunca mais vou visto pelo prefeito.
+        </p>
+    </div>
+    <div *ngIf="hasDistracted()">
+        <p>
+            A tentativa de distração foi terrível a pedra lançada, só serviu para atrair atenção dos orcs.
+            Alejandro tentou se render, mas os orcs tinham outras ordens com relação a invasores, ele nunca mais foi
+            visto em Dreen.
+        </p>
+    </div>
+    <div *ngIf="hasRun()">
+        <p>
+            Com um passo em falso, a má sorte de Alejandro o entregou aos orcs. Alejandro tentou se render, mas eles tinham
+            outras ordens com relação a invasores, assim ele nunca mais foi visto em Dreen.
+        </p>
+    </div>
+</ng-template>

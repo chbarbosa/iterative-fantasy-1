@@ -1,1 +1,61 @@
-<p>strange-opening works!</p>
+<h3 class="my-5">Descendo</h3>
+<p>
+    Por um caminho escuro e mal iluminado Alejandro andou por quase dez minutos, após caminhar bastante, notou que o
+    lugar começava a ficar iluminado por uma forte luz roxa, então encontrou um portal feito dessa luz, não dava para
+    saber onde ele poderia parar, porém quando esse pensamento veio a cabeça junto com a vontade de voltar, a luz ficou
+    mais forte o envolvendo completamente. Seu corpo foi sugado, teve uma sensação estranha, seu estômago se contorcia,
+    sentia-se leve e perdia a sensação de tocar o chão.</p>
+<p>
+    Quando voltou a si, estava de olhos fechados, tinha feito isso por instinto, já não sentia mais o ar empoeirado do
+    velho castelo, então abriu os olhos, e pouco via ali.
+    Haviam duas tochas iluminando a frente, não entendia onde estava, tateou o chão e a parede atrás, estavam frios,
+    havia muita umidade no local, era um chão bem arenoso e paredes de pedras. Então uma luz alaranjada dançava bem a
+    frente com a força de um vento fraco iluminando por pouco tempo um corredor natural de uma caverna.
+    A tensão tomou conta dele, tinha perdido completamente o controle da situação, não sabia onde estava e sua
+    preocupação não parava de crescer.
+</p>
+<P>
+    - Alguém já sabe que estou aqui? Quem sabe? Seria uma pessoa poderosa? Um bruxo? Os elfos? Seria um caminho secreto
+    dos corrompidos? - dizia para si mesmo com a cabeça cheia de dúvidas.
+</P>
+<p>
+    Agora, o corredor era mais iluminado, tochas alaranjadas mostravam passagens rústicas com pequenas runas que podiam
+    ser notadas por qualquer um. Alejandro caminhava com bastante prudência, pois temia encontrar um feiticeiro
+    poderoso. Um pouco mais à frente, luzes verdes, vermelhas e azuis iluminavam um acesso, a frequência era bem lenta,
+    mas chamava a atenção, alguém preparava algo no final do corredor. Alejandro torcia por um alquimista, pois um mago
+    vermelho, um conjurador ou um corrompido seria um desafio provavelmente mortal.
+</p>
+<p>
+    Alejandro espiava atentamente o local, parecia um laboratório improvisado de alquimia com vários livros e alguns
+    itens estranhos em vidros e caixas, o odor do local não era nada agradável. No meio de tudo isso, um senhor de
+    cabelos brancos e barba rala olha uns livros e prepara uns líquidos com luz própria estranhos em recipientes bem
+    diferentes, estava tão concentrado que não notava a presença de Alejandro, o que fazer?
+</p>
+
+<div *ngIf="hasNoDecision(); else elseBlock">
+    <hr>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword()" role="button">Atacar impetuosamente com
+        espada</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useBesta()" role="button">Atacar com besta de forma
+        furtiva</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run()" role="button">Fugir</a>
+</div>
+<ng-template #elseBlock>
+    <div *ngIf="hasUsedSword()">
+        <p>
+            Alejandro tentou um ataque desesperado, mas algo ativou chamando a atenção do alquimista. Então Alejandro
+            não conseguia mais mover seu corpo. O alquimista virou para ele, então percebeu que
+            estava envolvido por um gás amarelado e perdendo a consciência. Alejandro nunca mais foi visto em Dreen.
+        </p>
+    </div>
+    <div *ngIf="hasUsedBesta()">
+        <p>
+            Alejandro tentou um ataque furtivo, mas algo ativou chamando a atenção do alquimista. Então Alejandro não
+            conseguia mais mover seu corpo. O alquimista virou para ele, então percebeu que estava
+            envolvido por um gás amarelado e perdendo a consciência. Alejandro nunca mais foi visto em Dreen.
+        </p>
+    </div>
+    <div *ngIf="hasRun()">
+        <app-run-from></app-run-from>
+    </div>
+</ng-template>
