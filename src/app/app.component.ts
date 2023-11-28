@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var gtag: Function;
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,10 @@ export class AppComponent {
 
   goTonight() {
     localStorage.setItem("night", "true");
+      gtag('event', 'TRACK_ME_BUTTON_CLICKED', {
+      'event_category': 'BUTTON_CLICK',
+      'event_label': 'Track Me Click',
+      'value': 'dark chosed'   });
     this.setDark();
   }
 
@@ -29,6 +34,11 @@ export class AppComponent {
   goNow() {
     if (confirm("Confirma?")) {
       localStorage.setItem("night", "false");
+      localStorage.setItem("night", "true");
+        gtag('event', 'TRACK_ME_BUTTON_CLICKED', {
+        'event_category': 'BUTTON_CLICK',
+        'event_label': 'Track Me Click',
+        'value': 'go now chosed'   });
     }
   }
 
