@@ -18,6 +18,8 @@
       noite</a>
   </div>
   <ng-template #elseBlock>
+    <img *ngIf="!getNight()" class="images mb-2" src="assets/resources/img/clight.jpeg"/>
+    <img *ngIf="getNight()" class="images mb-2" src="assets/resources/img/cdark.jpeg"/>
     <P>
       Na noite seguinte, foi investigar o local levando uma bolsa com alguns itens interessantes, uma pequena besta e
       uma espada ense com lâmina amarelada. Usando uma proteção de couro grosso de cor chumbo para ajudar na tarefa
