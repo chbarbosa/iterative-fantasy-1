@@ -32,14 +32,12 @@ export class AppComponent {
   }
 
   goNow() {
-    if (confirm("Confirma?")) {
-      localStorage.setItem("night", "false");
-      localStorage.setItem("night", "true");
-        gtag('event', 'TRACK_ME_BUTTON_CLICKED', {
-        'event_category': 'BUTTON_CLICK',
-        'event_label': 'Track Me Click',
-        'value': 'go now chosed'   });
-    }
+    localStorage.setItem("night", "false");
+    localStorage.setItem("night", "true");
+      gtag('event', 'TRACK_ME_BUTTON_CLICKED', {
+      'event_category': 'BUTTON_CLICK',
+      'event_label': 'Track Me Click',
+      'value': 'go now chosed'   });
   }
 
   hasNoDecision() {
@@ -52,15 +50,13 @@ export class AppComponent {
   hasNoWayDecision() {
     return localStorage.getItem("castle") == undefined;
   }
-  enterCastle() {
-    if (confirm("Confirma?")) {
-      localStorage.setItem("castle", "true");
-    }
+  enterCastle(event: Event) {
+    event.preventDefault();
+    localStorage.setItem("castle", "true");
   }
-  goStrangeOpening() {
-    if (confirm("Confirma?")) {
-      localStorage.setItem("castle", "false");
-    }
+  goStrangeOpening(event: Event) {
+    event.preventDefault();
+    localStorage.setItem("castle", "false");
   }
   hasEnteredCastle() {
     return  localStorage.getItem("castle") === "true";

@@ -9,10 +9,10 @@
 
 <div *ngIf="hasNoDecision(); else elseBlock">
     <hr>
-    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword()" role="button">Atacar com
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword($event)" role="button">Atacar com
         espada</a>
-    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="distract()" role="button">Distrair</a>
-    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run()" role="button">Fugir</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="distract($event)" role="button">Distrair</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run($event)" role="button">Fugir</a>
 </div>
 <ng-template #elseBlock>
     <div *ngIf="hasUsedSword()">

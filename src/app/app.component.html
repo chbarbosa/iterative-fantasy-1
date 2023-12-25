@@ -29,8 +29,8 @@
     </P>
     <div *ngIf="hasNoWayDecision(); else elseBlockForWay">
       <hr>
-      <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="enterCastle()" role="button">Entrar no castelo</a>
-      <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goStrangeOpening()" role="button">Descer pela
+      <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="enterCastle($event)" role="button">Entrar no castelo</a>
+      <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goStrangeOpening($event)" role="button">Descer pela
         abertura</a>
     </div>
     <ng-template #elseBlockForWay>

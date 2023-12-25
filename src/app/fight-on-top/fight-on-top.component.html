@@ -1,8 +1,8 @@
 <div *ngIf="hasNoDecision(); else elseBlock">
     <hr>
-    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useBesta()" role="button">Usar a besta?</a>
-    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword()" role="button">Usar a espada?</a>
-    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run()" role="button">Fugir!!</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useBesta($event)" role="button">Usar a besta?</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="useSword($event)" role="button">Usar a espada?</a>
+    <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="run($event)" role="button">Fugir!!</a>
 </div>
 <ng-template #elseBlock>
     <div *ngIf="hasUsedBesta()">

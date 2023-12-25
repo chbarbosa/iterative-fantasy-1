@@ -15,16 +15,20 @@ export abstract class FightOptionsAbstractComponent {
   hasDistracted(): any {
     return localStorage.getItem(this.actionRef) === "distract";
   }
-  run() {
+  run(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "run");
   }
-  useSword() {
+  useSword(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "sword");
   }
-  useBesta() {
+  useBesta(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "besta");
   }
-  distract() {
+  distract(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "distract");
   }
   hasNoDecision(): any {

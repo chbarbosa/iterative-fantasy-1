@@ -6,8 +6,8 @@
 </p>
 <div *ngIf="hasNoDecision(); else elseBlock">
   <hr>
-  <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goNextRoom()" role="button">Ir para a sala</a>
-  <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="climbStairs()" role="button">Subir escada</a>
+  <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="goNextRoom($event)" role="button">Ir para a sala</a>
+  <a class="btn btn-primary  btn-lg btn-block" href="#" (click)="climbStairs($event)" role="button">Subir escada</a>
 </div>
 <ng-template #elseBlock>
   <app-entering-next-room *ngIf="hasGoneNextRoom()"></app-entering-next-room>

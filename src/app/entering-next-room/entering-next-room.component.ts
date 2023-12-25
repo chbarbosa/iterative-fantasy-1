@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-entering-next-room',
@@ -16,13 +16,16 @@ export class EnteringNextRoomComponent {
   hasUsedBesta(): any {
     return  localStorage.getItem(this.actionRef) === "besta";
   }
-  run() {
+  run(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "run");
   }
-  useSword() {
+  useSword(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "sword");
   }
-  useBesta() {
+  useBesta(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "besta");
   }
   hasNoDecision(): any {

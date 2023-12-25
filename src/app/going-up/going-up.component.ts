@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-going-up',
@@ -13,10 +13,12 @@ export class GoingUpComponent {
   hasGoneRight(): any {
     return localStorage.getItem(this.actionRef) === "right";
   }
-  goLeft() {
+  goLeft(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "left");
   }
-  goRight() {
+  goRight(event: Event) {
+    event.preventDefault();
     localStorage.setItem(this.actionRef, "right");
   }
   hasNoDecision(): any {
