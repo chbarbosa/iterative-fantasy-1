@@ -53,10 +53,18 @@ export class AppComponent {
   enterCastle(event: Event) {
     event.preventDefault();
     localStorage.setItem("castle", "true");
+    gtag('event', 'TRACK_ME_BUTTON_CLICKED', {
+    'event_category': 'BUTTON_CLICK',
+    'event_label': 'Track Me Click',
+    'value': 'go to castle'   });
   }
   goStrangeOpening(event: Event) {
     event.preventDefault();
     localStorage.setItem("castle", "false");
+    gtag('event', 'TRACK_ME_BUTTON_CLICKED', {
+    'event_category': 'BUTTON_CLICK',
+    'event_label': 'Track Me Click',
+    'value': 'go to strange opening'   });
   }
   hasEnteredCastle() {
     return  localStorage.getItem("castle") === "true";
