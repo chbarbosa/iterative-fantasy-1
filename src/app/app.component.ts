@@ -33,7 +33,6 @@ export class AppComponent {
 
   goNow() {
     localStorage.setItem("night", "false");
-    localStorage.setItem("night", "true");
       gtag('event', 'TRACK_ME_BUTTON_CLICKED', {
       'event_category': 'BUTTON_CLICK',
       'event_label': 'Track Me Click',
@@ -46,6 +45,9 @@ export class AppComponent {
 
   getNight() {
     return localStorage.getItem("night") === "true";
+  }
+  goesImmediately() {
+    return localStorage.getItem("night") === "false";
   }
   hasNoWayDecision() {
     return localStorage.getItem("castle") == undefined;
