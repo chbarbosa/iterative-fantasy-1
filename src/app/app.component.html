@@ -26,7 +26,13 @@
     </div>
     <ng-template #elseBlockForWay>
       <app-entering-castle *ngIf="hasEnteredCastle()"></app-entering-castle>
-      <app-strange-opening *ngIf="!hasEnteredCastle()"></app-strange-opening>
+      <div *ngIf="!hasEnteredCastle()">
+        <h3 class="my-5">Descendo</h3>
+        <p>
+        Por um caminho escuro e mal iluminado Alejandro andou por quase dez minutos, após caminhar bastante, notou que o lugar começava a ficar iluminado por uma forte luz roxa, então encontrou um portal feito dessa luz, não dava para saber onde ele poderia parar, porém quando esse pensamento veio a cabeça junto com a vontade de voltar, a luz ficou mais forte o envolvendo completamente. Seu corpo foi sugado, teve uma sensação estranha, seu estômago se contorcia, sentia-se leve e perdia a sensação de tocar o chão.
+        </p>
+        <app-strange-opening></app-strange-opening>
+      </div>
     </ng-template>
   </ng-template>
 </div>
